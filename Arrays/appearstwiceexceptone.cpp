@@ -1,0 +1,21 @@
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int main(){
+     int arr[10],n,freq=0,i;
+     cout<<"enter number of elements in array: ";
+    cin>>n;
+    cout<<"enter elements in array: ";
+    for(int i=0;i<n;i++){
+        cin>> arr[i];
+    }
+    sort(arr,arr+n);
+    for(int i=0;i<n-1;i++){
+        if(arr[i]!=arr[i+1]&&arr[i]!=arr[i-1]){
+            cout<<"elements occuring once :"<<arr[i];
+            return 0;
+        }
+    }
+    cout<<"Element occurring once: "<<arr[n-1];
+  return 0;  
+}
