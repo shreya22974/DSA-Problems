@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 int main(){
-     int row,col;
+    int row,col;
     cout<< "enter rows and cols: ";
     cin>> row >> col;
     int mat[row][col];
@@ -10,11 +10,10 @@ int main(){
             cin>>mat[i][j];
         }
     }
-    cout<<"row major :";
-    for(int i=0;i<row;i++){
-    for(int j=0;j<col;j++){
-         cout<< mat[i][j]<<" ";
-      }
+     for(int j=0;j<col;j++){
+        for (int i=0;i<row;i++){
+            cout<<mat[i][j]<<" ";
+        }
     }
-    return 0;
+
 }

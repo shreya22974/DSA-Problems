@@ -1,13 +1,26 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int r,c;
-    cin>> r>> c;
-    int mat[r][c];
-    for(int i=0;i<r;i++){
-        for (int j=0;j<c;j++){
+    int n;
+    cout<<"enter size of square matrix:";
+    cin>>n;
+    int mat[n][n];
+    int rotated[n][n];
+    //input 
+    for(int i=0;i<n;i++){
+        for (int j=0;j<n;j++){
             cin>>mat[i][j];
         }
     }
-    
+     for(int i=0;i<n;i++){
+        for (int j=0;j<n;j++){
+          rotated[j][n-1-i]=mat[i][j];
+        }
+    }
+    for(int i=0;i<n;i++){
+        for (int j=0;j<n;j++){
+            cout<<rotated[i][j]<<" ";
+        }
+        cout<<endl;
+    }
 }
