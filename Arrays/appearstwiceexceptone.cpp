@@ -12,10 +12,10 @@ int main(){
     sort(arr,arr+n);
     for(int i=0;i<n-1;i++){
         if(arr[i]!=arr[i+1]&&arr[i]!=arr[i-1]){
-            cout<<"elements occuring once :"<<arr[i];
+            cout<<"elements occuring once is :"<<arr[i];
             return 0;
         }
     }
-    cout<<"Element occurring once: "<<arr[n-1];
+    cout<<"Element occurring once is: "<<arr[n-1];
   return 0;  
 }
