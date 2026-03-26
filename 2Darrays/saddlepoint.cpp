@@ -11,6 +11,7 @@ int main(){
             cin>>mat[i][j];
         }
     }
+    bool found = false; 
     for(int i=0;i<row;i++){
          int minVal = mat[i][0];
          int colIndex = 0;
@@ -28,7 +29,11 @@ int main(){
     }
     if(minVal==maxVal){
         cout<< "Saddle point: "<< maxVal<<endl;
-    }
+        found = true;
+    } 
 }
-cout<<"No saddle point";
+if(found==false){
+    cout<<"No Saddle point";
+}
+
 }

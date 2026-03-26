@@ -9,8 +9,8 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-     int st = 0;
-    int end = n - 1;
+     int st = 1;
+    int end = n - 2;
     while(st<=end){
         int mid=st+(end-st)/2;
         if(arr[mid-1]<arr[mid] && arr[mid]>arr[mid+1]){

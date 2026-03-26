@@ -1,15 +1,16 @@
 #include<iostream>
 using namespace std;
 int main(){
-    int r=4,c=4;
-    int mat[4][4];
+    int r=3,c=3;
+    int mat[3][3];
     for(int i=0;i<3;i++){
         for(int j=0;j<3;j++){
         cin>>mat[i][j];
         }
     }
     int top=0,bottom=3,right=3,left=0;
-    //right
+    while (left<=right && top<=bottom){
+          //right
     for(int i=left;i<right ;i++){
          cout<<mat[top][i];  
     }
@@ -29,4 +30,10 @@ int main(){
         cout<<mat[i][left];
     }
     left++;
+    }
+     for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+          cout<<mat[i][j]<<" ";
+        }
+    }
 }

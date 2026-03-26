@@ -1,28 +1,28 @@
 #include<iostream>
 using namespace std;
-int lowerBound(int nums[],int n,int target){
+int floor(int nums[],int n,int target){
     int st=0;
     int end=n-1;
-    int ans=n;
+    int ans=-1;
     while(st<=end){
         int mid=st+(end-st)/2;
-       if(nums[mid]>=target){
-        ans=mid;
-        end=mid-1;
+       if(nums[mid]<=target){
+        ans=nums[mid];
+       st=mid+1;
        }else{
-        st=mid+1;
+        end=mid-1;
        }
     }
     return ans;
   }
-  int upperBound(int nums[],int n,int target){
+  int ceil(int nums[],int n,int target){
     int st=0;
     int end=n-1;
-    int ans=n;
+    int ans=-1;
     while(st<=end){
         int mid=st+(end-st)/2;
-        if(nums[mid]>target){
-            ans=mid;
+        if(nums[mid]>=target){
+            ans=nums[mid];
             end=mid-1;
         }else {
             st=mid+1;
@@ -41,10 +41,10 @@ int lowerBound(int nums[],int n,int target){
     cout<<"enter target: ";
     cin>>target;
 
-    int LB = lowerBound(nums, n, target);
-    int UB = upperBound(nums, n, target);
+    int floorvalue = floor(nums, n, target);
+    int ceilvalue = ceil(nums, n, target);
 
-    cout << "Lower Bound: " << LB << endl;
-    cout << "Upper Bound: " << UB << endl;
+    cout << "Floor  Value : " << floorvalue << endl;
+    cout << "Ceil Value : " << ceilvalue << endl;
 
   }
